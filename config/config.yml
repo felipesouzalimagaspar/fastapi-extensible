@@ -1,0 +1,24 @@
+app:
+  databases:
+    - host: localhost
+      port: 6379
+      db: 0
+      alias: master
+    - host: localhost
+      port: 6379
+      db: 2
+      alias: replication
+  api:
+    prefix: /fastapi/
+    docs: /docs/swagger/
+    name: FastAPI
+    description: Generic and extensible api using fastapi
+    version: 0.0.1
+    forceHTTPS: false
+    oauth2:
+      secret_key: a6f1764561c387e9859842f8059d469fc57a4de32c44197d743af94e22c247cf
+      algorithm: HS256
+      timeout: 5 
+    modules:
+      - module_name: user
+        class_name: User

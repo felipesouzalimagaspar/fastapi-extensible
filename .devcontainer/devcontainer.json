@@ -1,0 +1,11 @@
+{
+  "name": "Ubuntu Python3.9 FastAPI Dev Container",
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--network", "host"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python"
+  ]
+}
